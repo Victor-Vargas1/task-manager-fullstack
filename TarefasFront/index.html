@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Task<span class="highlight">Flow</span></h1>
+    <p class="subtitulo">Organize suas tarefas com fluxo e eficiência</p>
+    <form id="form">
+        <div class="form-grid">
+
+            <div class="campo titulo">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" placeholder="Título da tarefa" required>
+            </div>
+
+            <div class="campo prazo">
+                <label for="prazo">Prazo</label>
+                <input type="date" id="prazo">
+            </div>
+
+            <div class="campo descricao">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" placeholder="Descrição da tarefa"></textarea>
+            </div>
+
+        </div>
+
+        </div>
+        <div class="botoes-form">
+            <button type="submit" class="btn-add">Adicionar</button>
+            <button type="button" class="btn-clear" onclick="limparCampos()">Limpar</button>
+        </div>
+    </form>
+
+    <div class="campo-busca">
+        <input type="text" id="pesquisa" placeholder="Buscar tarefa...">
+
+        <!-- lupa vazada -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+        </svg>
+    </div>
+    </div>
+
+    <div class="container-lista">
+        <div id="lista"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
